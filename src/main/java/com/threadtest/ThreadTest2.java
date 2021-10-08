@@ -24,12 +24,12 @@ public class ThreadTest2 {
     }
 
     public static void main(String[] args) {
-        ThreadTest2 threadTest1 = new ThreadTest2();
+        ThreadTest2 threadTest2 = new ThreadTest2();
 
         new Thread(() -> {
             for (int i=0; i<10; i++) {
                 try {
-                    threadTest1.methodA();
+                    threadTest2.methodA();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -40,7 +40,7 @@ public class ThreadTest2 {
         new Thread(() -> {
             for (int i=0; i<10; i++) {
                 try {
-                    threadTest1.methodB();
+                    threadTest2.methodB();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
